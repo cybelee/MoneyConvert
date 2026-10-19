@@ -23,7 +23,10 @@ MUTED = "#696B70"
 app = ctk.CTk(fg_color=BG)
 app.title("MoneyConvert")
 app.iconbitmap("assets/logoTeam.ico")
-app.geometry("420x760") 
+
+app.geometry("420x760")
+app.resizable(False, False)
+app.attributes("-fullscreen", False) 
 header = ctk.CTkFrame(app, fg_color="transparent")
 header.pack(fill="x", padx=26, pady=(30, 24))
 
@@ -203,5 +206,6 @@ ctk.CTkLabel(
     font=("Inter", 11),
     text_color=MUTED
 ).pack(pady=(4, 10))
+
 
 app.mainloop()
